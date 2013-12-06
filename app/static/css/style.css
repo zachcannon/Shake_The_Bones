@@ -1,0 +1,34 @@
+.leftframe {
+	border: 1px solid;
+	border-radius: 10px;
+	background-color: GhostWhite;
+}
+
+.rightframe {
+	border: 1px solid;
+	border-radius: 10px;
+	background-color: Gainsboro;
+}
+
+.pagebase {
+	background-color: Maroon;
+}
+
+.pageheader {
+	border: 1px solid;
+	border-radius: 10px;
+	background-color: GhostWhite;
+	padding-left: 33%;
+}
+
+.frameheader {
+	text-align: center;
+}
+
+.scorebox {
+	text-align: center;
+	font-size: xx-large;
+}
+
+.counterbutton {
+}

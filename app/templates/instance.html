@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class='pageheader'>Shake Dem Bones - 42 Game Tracker </h1>
+
+<div class="container-fluid">
+	<div class="row-fluid">	
+			<div class="span6 leftframe">			
+				<h2 class='frameheader'> Score </h2>
+				
+				<div class='row-fluid'>
+					<div class="span6">
+						<h3 class='frameheader'>Us</h3>	
+						<p id='us_score_box' class='scorebox'>0</p>						
+					</div>
+					
+					<div class="span6">
+						<h3 class='frameheader'>Them</h3>
+						<p id='them_score_box' class='scorebox'>0</p>	
+					</div>
+				</div>
+				
+				<div class='row-fluid'>	
+					
+					<div class='span6'>
+						<button id='us_increment' class='counterbutton'> ADD </button>
+						<button id='us_decrement' class='counterbutton'> SUBTRACT </button>
+					</div>
+					
+					<div class='span6'>
+						<button id='them_increment' class='counterbutton'> ADD </button>
+						<button id='them_decrement' class='counterbutton'> SUBTRACT </button>
+					</div>					
+				</div>
+				
+			</div>
+		
+		
+		<div class="span6 rightframe"> 
+			<h2 class='frameheader'> Shaker </h2>
+		</div>
+	</div>
+</div>
+{% endblock %}
