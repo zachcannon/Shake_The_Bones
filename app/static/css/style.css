@@ -1,7 +1,7 @@
 .leftframetop {
 	border: 1px solid;
 	border-radius: 10px;
-	background-color: GhostWhite;
+	background-color: White;
 }
 
 .leftframebottom {
@@ -13,7 +13,7 @@
 .rightframe {
 	border: 1px solid;
 	border-radius: 10px;
-	background-color: Gainsboro;
+	background-color: White;
 }
 
 .pagebase {
@@ -23,7 +23,7 @@
 .pageheader {
 	border: 1px solid;
 	border-radius: 10px;
-	background-color: GhostWhite;
+	background-color: White;
 	padding-left: 33%;
 }
 
@@ -36,7 +36,13 @@
 	font-size: xx-large;
 }
 
-.counterbutton {
+.scorechangebutton {
+	position: relative;
+	top: 15px;
+}
+
+.btn {
+	margin: 3px;
 }
 
 .arrowholder {

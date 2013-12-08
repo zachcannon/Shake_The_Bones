@@ -2,103 +2,197 @@
 
 {% block content %}
 
-<h1 class='pageheader'>Shake Dem Bones - 42 Game Tracker </h1>
 
 <div class="container-fluid">
 	<div class='row-fluid visible-desktop'>
 		<div class='span12'>
-		
-		
+			<h1 class='pageheader'>Shake The Bones - 42 Game Tracker </h1>
+			
 			<div class="row-fluid">	
-				<div class="span6">
-
-					<div class="row-fluid">	
-						<div class="span12 leftframetop">
-							<h2 class='frameheader'> Score </h2>
-							
-							<div class='row-fluid'>
-								<div class="span6">
-									<h3 class='frameheader'>Us</h3>	
-									<p id='us_score_box' class='scorebox'>0</p>						
-								</div>
-								
-								<div class="span6">
-									<h3 class='frameheader'>Them</h3>
-									<p id='them_score_box' class='scorebox'>0</p>	
-								</div>
-								
-							</div>
-							<div class='row-fluid'>							
-							
-								<div class='span6'>
-									<button id='us_increment' class='counterbutton'> ADD MARK </button>
-									<button id='us_decrement' class='counterbutton'> SUBTRACT MARK </button>
-								</div>
-								
-								<div class='span6'>
-									<button id='them_increment' class='counterbutton'> ADD MARK </button>
-									<button id='them_decrement' class='counterbutton'> SUBTRACT MARK </button>
-								</div>	
-							</div>
-						</div>
-					</div>
+				<div class="span7">
 
 					<div class="row-fluid">	
 						<div class="span12 leftframebottom">
 							<h2 class='frameheader'> Turn </h2>
 							
 							<div class='row-fluid'>
-								<div class="span8">
-									<h3>This hand is worth <span id='count_on_turn'>1</span> mark(s).</h3>
-									<button id='increment_count'>INCREMENT MARKS</button>
-									<button id='decrement_count'>DECREMENT MARKS</button>
+								<div class="span5">
+									<h3>This hand is worth <span class='js-count_on_turn'>1</span> mark(s).</h3>
+									<button class="btn btn-info btn-default js-increment_count">INCREMENT MARKS</button>
+									<button class="btn btn-info btn-default js-decrement_count">DECREMENT MARKS</button>
 								</div>
 								
-								<div class="span4">
-									<div><button id='us_win_the_turn'> 'US' WINS THE HAND </button></div>
-									<div><button id='them_win_the_turn'> 'THEM' WINS THE HAND </button></div>
-									<div><button id='reset_count_to_zero'> RESET SCORE </button></div>
+								<div class="span7">
+									<h3>Who won the last turn?</h3>
+									<button class="btn btn-success btn-lg js-us_win_the_turn"> US </button>
+									<button class="btn btn-success btn-lg js-them_win_the_turn"> THEM </button>
+									<button class="btn btn-danger btn-lg js-reset_count_to_zero"> RESET SCORE </button>
 								</div>
 							</div>								
 						</div>
-					</div>										
+					</div>
+
+					<div class="row-fluid">	
+						<div class="span12 leftframetop">
+							<h2 class='frameheader'> Score </h2>
+							
+							<div class='row-fluid'>
+							
+								<div class="span1 offset2">
+									<h3 class='frameheader'>Us</h3>	
+									<p class='scorebox js-us_score_box'>0</p>						
+								</div>
+							
+								<div class='span3'>
+									<div><button class='btn btn-info btn-default scorechangebutton js-us_increment'> ADD MARK </button></div>
+									<div><button class='btn btn-info btn-default scorechangebutton js-us_decrement'> SUBTRACT MARK </button></div>
+								</div>
+							
+								<div class="span1 offset2">
+									<h3 class='frameheader'>Them</h3>
+									<p class='scorebox js-them_score_box'>0</p>	
+								</div>
+								
+								<div class='span3'>
+									<div><button class='btn btn-info btn-default scorechangebutton js-them_increment'> ADD MARK </button></div>
+									<div><button class='btn btn-info btn-default scorechangebutton js-them_decrement'> SUBTRACT MARK </button></div>
+								</div>							
+								
+							</div>
+							
+						</div>
+					</div>					
 				</div>
 				
 				
-				<div class="span6 rightframe"> 
+				<div class="span5 rightframe"> 
 					<h2 class='frameheader'> Shaker </h2>
 					
 					<div class='row-fluid'>
 						<div class='span2 offset5 arrowholder'>
-							<img src="static/arrow_up.png" class="shakerarrow" id="arrow_up"></img>
+							<img src="static/arrow_up.png" class="shakerarrow js-arrow_up"></img>
 							<img src="static/arrow_up_hollow.png" class="hollowshakerarrow"></img>
 						</div>
 					</div>
 					
 					<div class='row-fluid'>
 						<div class='span2 offset2 arrowholder'>
-							<img src="static/arrow_left.png" class="shakerarrow" id="arrow_left"></img>
+							<img src="static/arrow_left.png" class="shakerarrow js-arrow_left"></img>
 							<img src="static/arrow_left_hollow.png" class="hollowshakerarrow"></img>
 						</div>
 						<div class='span2 offset4 arrowholder'>
-							<img src="static/arrow_right.png" class="shakerarrow" id="arrow_right"></img>
+							<img src="static/arrow_right.png" class="shakerarrow js-arrow_right"></img>
 							<img src="static/arrow_right_hollow.png" class="hollowshakerarrow"></img>
 						</div>
 					</div>
 					
 					<div class='row-fluid'>
 						<div class='span2 offset5 arrowholder'>
-							<img src="static/arrow_down.png" class="shakerarrow" id="arrow_down"></img>
+							<img src="static/arrow_down.png" class="shakerarrow js-arrow_down"></img>
 							<img src="static/arrow_down_hollow.png" class="hollowshakerarrow"></img>
 						</div>
 					</div>
 					
 					<div class='row-fluid'>
-						<button id='next_shaker' class='counterbutton'> NEXT </button>
-						<button id='previous_shaker' class='counterbutton'> PREVIOUS </button>
+						<button class='btn btn-info btn-default js-next_shaker'> NEXT </button>
+						<button class='btn btn-info btn-default js-previous_shaker'> PREVIOUS </button>
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>	
+	
+	<div class='row-fluid hidden-desktop'>
+		<div class='span12'>
+		
+			<div class="row-fluid">	
+				<div class="span12 leftframebottom">
+					<h2 class='frameheader'> Turn </h2>
+					
+					<div class='row-fluid'>
+						<div class="span5">
+							<h3>This hand is worth <span class='js-count_on_turn'>1</span> mark(s).</h3>
+							<button class="btn btn-info btn-default js-increment_count">INCREMENT MARKS</button>
+							<button class="btn btn-info btn-default js-decrement_count">DECREMENT MARKS</button>
+						</div>
+						
+						<div class="span7">
+							<h3>Who won the last turn?</h3>
+							<button class="btn btn-success btn-lg js-us_win_the_turn"> US </button>
+							<button class="btn btn-success btn-lg js-them_win_the_turn"> THEM </button>
+							<button class="btn btn-danger btn-lg js-reset_count_to_zero"> RESET SCORE </button>
+						</div>
+					</div>								
+				</div>
+			</div>
+			
+			<div class="row-fluid">	
+				<div class="span12 leftframetop">
+					<h2 class='frameheader'> Score </h2>
+					
+					<div class='row-fluid'>
+					
+						<div class="span1 offset2">
+							<h3 class='frameheader'>Us</h3>	
+							<p class='scorebox js-us_score_box'>0</p>						
+						</div>
+					
+						<div class='span3'>
+							<div><button class='btn btn-info btn-default scorechangebutton js-us_increment'> ADD MARK </button></div>
+							<div><button class='btn btn-info btn-default scorechangebutton js-us_decrement'> SUBTRACT MARK </button></div>
+						</div>
+					
+						<div class="span1 offset2">
+							<h3 class='frameheader'>Them</h3>
+							<p class='scorebox js-them_score_box'>0</p>	
+						</div>
+						
+						<div class='span3'>
+							<div><button class='btn btn-info btn-default scorechangebutton js-them_increment'> ADD MARK </button></div>
+							<div><button class='btn btn-info btn-default scorechangebutton js-them_decrement'> SUBTRACT MARK </button></div>
+						</div>							
+						
+					</div>
+					
+				</div>
+			</div>
+		
+			<div class="row-fluid">
+				<div class="span12 rightframe"> 
+					<h2 class='frameheader'> Shaker </h2>
+					
+					<div class='row-fluid'>
+						<div class='span2 offset5 arrowholder'>
+							<img src="static/arrow_up.png" class="shakerarrow js-arrow_up"></img>
+							<img src="static/arrow_up_hollow.png" class="hollowshakerarrow"></img>
+						</div>
+					</div>
+					
+					<div class='row-fluid'>
+						<div class='span2 offset2 arrowholder'>
+							<img src="static/arrow_left.png" class="shakerarrow js-arrow_left"></img>
+							<img src="static/arrow_left_hollow.png" class="hollowshakerarrow"></img>
+						</div>
+						<div class='span2 offset4 arrowholder'>
+							<img src="static/arrow_right.png" class="shakerarrow js-arrow_right"></img>
+							<img src="static/arrow_right_hollow.png" class="hollowshakerarrow"></img>
+						</div>
+					</div>
+					
+					<div class='row-fluid'>
+						<div class='span2 offset5 arrowholder'>
+							<img src="static/arrow_down.png" class="shakerarrow js-arrow_down"></img>
+							<img src="static/arrow_down_hollow.png" class="hollowshakerarrow"></img>
+						</div>
+					</div>
+					
+					<div class='row-fluid'>
+						<button class='btn btn-info btn-default js-next_shaker'> NEXT </button>
+						<button class='btn btn-info btn-default js-previous_shaker'> PREVIOUS </button>
+					</div>
+				</div>
+			</div>
+		
 		</div>
 	</div>
 </div>
