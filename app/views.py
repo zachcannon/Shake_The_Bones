@@ -10,5 +10,5 @@ def redirect_to_home():
 
 @app.route('/game')
 def game():
-    return render_template('instance.html')
+    return render_template('base.html')
 
