@@ -32,3 +32,18 @@
 
 .counterbutton {
 }
+
+.arrowholder {
+	position: relative;
+    z-index: 1;
+}
+
+.shakerarrow {
+	position: absolute;
+	z-index: 3;
+}
+
+.hollowshakerarrow {
+	position: relative;
+	z-index: 2;
+}
