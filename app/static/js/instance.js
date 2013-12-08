@@ -5,6 +5,38 @@ $( document ).ready(function() {
 	var currentShakerNumber = 0;
 	updateShaker(currentShakerNumber);
 
+	$('#us_win_the_turn').click( function() {
+		var current_turn_count = parseInt($('#count_on_turn').text(), 10);
+		var value = parseInt($('#us_score_box').text(), 10);
+		
+		value += current_turn_count
+		
+		$('#us_score_box').empty();	
+		$('#us_score_box').append(value);
+		
+		$('#count_on_turn').empty();
+		$('#count_on_turn').append(1);
+		
+		currentShakerNumber = incrementShakerNumber(currentShakerNumber);
+		updateShaker(currentShakerNumber);
+	});
+	
+	$('#them_win_the_turn').click( function() {
+		var current_turn_count = parseInt($('#count_on_turn').text(), 10);
+		var value = parseInt($('#them_score_box').text(), 10);
+		
+		value += current_turn_count
+		
+		$('#them_score_box').empty();	
+		$('#them_score_box').append(value);
+		
+		$('#count_on_turn').empty();
+		$('#count_on_turn').append(1);
+		
+		currentShakerNumber = incrementShakerNumber(currentShakerNumber);
+		updateShaker(currentShakerNumber);
+	});
+	
 	$('#next_shaker').click( function() {
 		currentShakerNumber = incrementShakerNumber(currentShakerNumber);
 		updateShaker(currentShakerNumber);
@@ -13,6 +45,20 @@ $( document ).ready(function() {
 	$('#previous_shaker').click( function() {
 		currentShakerNumber = decrementShakerNumber(currentShakerNumber);
 		updateShaker(currentShakerNumber);
+	});
+	
+	$('#increment_count').click( function() {
+		var current_turn_count = parseInt($('#count_on_turn').text(), 10);
+		current_turn_count += 1;		
+		$('#count_on_turn').empty();	
+		$('#count_on_turn').append(current_turn_count);
+	});
+	
+	$('#decrement_count').click( function() {
+		var current_turn_count = parseInt($('#count_on_turn').text(), 10);
+		current_turn_count -= 1;		
+		$('#count_on_turn').empty();	
+		$('#count_on_turn').append(current_turn_count);
 	});
 	
 	$('#us_increment').click( function() {
@@ -56,26 +102,22 @@ function decrementShakerNumber(currentShakerNumber) {
 	return currentShakerNumber;
 }
 
+function hideAllArrows() {
+	$('#arrow_up').hide();
+	$('#arrow_left').hide();
+	$('#arrow_right').hide();
+	$('#arrow_down').hide();
+}
+
 function updateShaker(currentShakerNumber) {
+	hideAllArrows();
 	if(currentShakerNumber == 0) {
 		$('#arrow_up').show();
-		$('#arrow_left').hide();
-		$('#arrow_right').hide();
-		$('#arrow_down').hide();
 	} else if(currentShakerNumber == 1) {
-		$('#arrow_up').hide();
-		$('#arrow_left').hide();
 		$('#arrow_right').show();
-		$('#arrow_down').hide();
 	} else if(currentShakerNumber == 2) {
-		$('#arrow_up').hide();
-		$('#arrow_left').hide();
-		$('#arrow_right').hide();
 		$('#arrow_down').show();
 	} else {
-		$('#arrow_up').hide();
 		$('#arrow_left').show();
-		$('#arrow_right').hide();
-		$('#arrow_down').hide();
 	}	
 }

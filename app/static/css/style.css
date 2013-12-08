@@ -1,7 +1,13 @@
-.leftframe {
+.leftframetop {
 	border: 1px solid;
 	border-radius: 10px;
 	background-color: GhostWhite;
+}
+
+.leftframebottom {
+	border: 1px solid;
+	border-radius: 10px;
+	background-color: White;
 }
 
 .rightframe {
