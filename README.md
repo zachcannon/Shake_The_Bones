@@ -1,3 +1,4 @@
-#Flying in Google App Engine using Flask
+Shake The Bones
 
-See this example application :)
+Project for class:
+	Computer Science 436 - Computer Human Interaction 
