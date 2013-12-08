@@ -31,13 +31,13 @@
 							<div class='row-fluid'>							
 							
 								<div class='span6'>
-									<button id='us_increment' class='counterbutton'> ADD </button>
-									<button id='us_decrement' class='counterbutton'> SUBTRACT </button>
+									<button id='us_increment' class='counterbutton'> ADD MARK </button>
+									<button id='us_decrement' class='counterbutton'> SUBTRACT MARK </button>
 								</div>
 								
 								<div class='span6'>
-									<button id='them_increment' class='counterbutton'> ADD </button>
-									<button id='them_decrement' class='counterbutton'> SUBTRACT </button>
+									<button id='them_increment' class='counterbutton'> ADD MARK </button>
+									<button id='them_decrement' class='counterbutton'> SUBTRACT MARK </button>
 								</div>	
 							</div>
 						</div>
@@ -49,14 +49,15 @@
 							
 							<div class='row-fluid'>
 								<div class="span8">
-									<h3>COUNT ON THIS TURN: <span id='count_on_turn'>1</span></h3>
-									<button id='increment_count'>INCREMENT COUNT</button>
-									<button id='decrement_count'>DECREMENT COUNT</button>
+									<h3>This hand is worth <span id='count_on_turn'>1</span> mark(s).</h3>
+									<button id='increment_count'>INCREMENT MARKS</button>
+									<button id='decrement_count'>DECREMENT MARKS</button>
 								</div>
 								
 								<div class="span4">
-									<button id='us_win_the_turn'> US WINS! </button>
-									<button id='them_win_the_turn'> THEM WINS! </button>
+									<div><button id='us_win_the_turn'> US WINS THE HAND </button></div>
+									<div><button id='them_win_the_turn'> THEM WINS THE HAND </button></div>
+									<div><button id='reset_count_to_zero'> RESET SCORE </button></div>
 								</div>
 							</div>								
 						</div>

@@ -5,6 +5,14 @@ $( document ).ready(function() {
 	var currentShakerNumber = 0;
 	updateShaker(currentShakerNumber);
 
+	$('#reset_count_to_zero').click( function() {
+		$('#us_score_box').empty();	
+		$('#us_score_box').append(0)
+		
+		$('#them_score_box').empty();	
+		$('#them_score_box').append(0)
+	});
+	
 	$('#us_win_the_turn').click( function() {
 		var current_turn_count = parseInt($('#count_on_turn').text(), 10);
 		var value = parseInt($('#us_score_box').text(), 10);
@@ -56,7 +64,8 @@ $( document ).ready(function() {
 	
 	$('#decrement_count').click( function() {
 		var current_turn_count = parseInt($('#count_on_turn').text(), 10);
-		current_turn_count -= 1;		
+		current_turn_count -= 1;
+		if(current_turn_count < 1) current_turn_count = 1;		
 		$('#count_on_turn').empty();	
 		$('#count_on_turn').append(current_turn_count);
 	});
