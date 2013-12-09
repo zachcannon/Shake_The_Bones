@@ -32,8 +32,9 @@ body {
 }
 
 .scorebox-phone {
-	margin: 2px;
-	font-size: x-large;
+	position: relative;
+	top: 10px;
+	font-size: 300%;
 }
 
 .scorechangebutton {
