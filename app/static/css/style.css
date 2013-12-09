@@ -31,6 +31,11 @@ body {
 	font-size: xx-large;
 }
 
+.scorebox-phone {
+	margin: 2px;
+	font-size: x-large;
+}
+
 .scorechangebutton {
 	position: relative;
 }
@@ -38,6 +43,12 @@ body {
 .turn-button {
 	height: 75px;
 	font-size: xx-large;
+	font-weight: bold;
+}
+
+.turn-button-phone {
+	height: 50px;
+	font-size: x-large;
 	font-weight: bold;
 }
 
