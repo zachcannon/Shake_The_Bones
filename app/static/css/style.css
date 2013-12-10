@@ -1,5 +1,5 @@
 body {
-	background-image: url('../app_background.jpg');
+	background-image: url('../shakebonestable.jpg');
 }
 
 .col{
@@ -39,6 +39,7 @@ body {
 
 .scorechangebutton {
 	position: relative;
+	font-size: xx-large;
 }
 
 .turn-button {

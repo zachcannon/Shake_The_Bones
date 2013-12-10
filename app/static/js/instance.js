@@ -6,21 +6,22 @@ $( document ).ready(function() {
 	updateShaker(currentShakerNumber);
 
 	$('.js-reset_count_to_zero').click( function() {
-		$('.js-us_score_box').empty();	
-		$('.js-us_score_box').append(0)
+		us_score = 0;
+		them_score = 0;
+		$('.js-us_score_box').empty()
+		$('.js-us_score_box').append(us_score)
 		
 		$('.js-them_score_box').empty();	
-		$('.js-them_score_box').append(0)
+		$('.js-them_score_box').append(them_score)
 	});
 	
 	$('.js-us_win_the_turn').click( function() {
 		var current_turn_count = parseInt($('.js-count_on_turn:visible').text(), 10);
-		var value = parseInt($('.js-us_score_box:visible').text(), 10);
 		
-		value += current_turn_count
+		us_score += current_turn_count
 		
 		$('.js-us_score_box').empty();	
-		$('.js-us_score_box').append(value);
+		$('.js-us_score_box').append(us_score);
 		
 		$('.js-count_on_turn').empty();
 		$('.js-count_on_turn').append(1);
@@ -31,12 +32,11 @@ $( document ).ready(function() {
 	
 	$('.js-them_win_the_turn').click( function() {
 		var current_turn_count = parseInt($('.js-count_on_turn:visible').text(), 10);
-		var value = parseInt($('.js-them_score_box:visible').text(), 10);
 		
-		value += current_turn_count
+		them_score += current_turn_count
 		
 		$('.js-them_score_box').empty();	
-		$('.js-them_score_box').append(value);
+		$('.js-them_score_box').append(them_score);
 		
 		$('.js-count_on_turn').empty();
 		$('.js-count_on_turn').append(1);
@@ -71,35 +71,35 @@ $( document ).ready(function() {
 	});
 	
 	$('.js-us_increment').click( function() {
-		var value = parseInt($('.js-us_score_box:visible').text(), 10);
-		value = value + 1;
+		us_score = us_score + 1;
 		$('.js-us_score_box').empty();	
-		$('.js-us_score_box').append(value);
+		$('.js-us_score_box').append(us_score);
 	});
 	
 	$('.js-us_decrement').click( function() {
 		var value = parseInt($('.js-us_score_box:visible').text(), 10);
-		value = value - 1;
-		if(value < 0) value=0;
+		us_score = us_score - 1;
+		if(us_score < 0) us_score=0;
 		$('.js-us_score_box').empty();	
-		$('.js-us_score_box').append(value);
+		$('.js-us_score_box').append(us_score);
 	});
 
 	$('.js-them_increment').click( function() {
-		var value = parseInt($('.js-them_score_box:visible').text(), 10);
-		value = value + 1;
+		them_score = them_score + 1;
 		$('.js-them_score_box').empty();	
-		$('.js-them_score_box').append(value);
+		$('.js-them_score_box').append(them_score);
 	});
 	
 	$('.js-them_decrement').click( function() {
-		var value = parseInt($('.js-them_score_box:visible').text(), 10);
-		value = value - 1;
-		if(value < 0) value=0;
+		them_score = them_score - 1;
+		if(them_score < 0) them_score=0;
 		$('.js-them_score_box').empty();	
-		$('.js-them_score_box').append(value);
+		$('.js-them_score_box').append(them_score);
 	});
 });
+
+var them_score = 0;
+var us_score = 0;
 
 function incrementShakerNumber(currentShakerNumber) {
 	currentShakerNumber ++;
