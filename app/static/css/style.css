@@ -39,6 +39,10 @@ body {
 
 .scorechangebutton {
 	position: relative;
+}
+
+.scorechangebutton-phone {
+	position: relative;
 	font-size: xx-large;
 }
 
